@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NatWest Payment Gateway</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+
+  <script>
+    window.addEventListener('message', function(event) {
+      const data = event.data;
+      console.log('[Angular Host] Received message:', data);
+
+      if (!data || data.type !== 'FRAUDOPS_ACTION') {
+        return;
+      }
+
+      const message = data.message || `FraudOps ${data.action} on ${data.txn?.id}`;
+      console.log('[Angular Host] Showing alert:', message);
+      alert(message);
+    });
+  </script>
+</body>
+</html>

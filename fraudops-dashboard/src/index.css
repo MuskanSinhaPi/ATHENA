@@ -1,0 +1,131 @@
+:root{
+  --nw-primary: #672C8E;
+  --nw-accent:  #D94FA1;
+  --nw-muted:   #6B7280;
+  --nw-bg:      #F7F7FB;
+  --nw-surface: #FFFFFF;
+  --nw-radius: 8px;
+  --nw-padding: 12px;
+}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  background:var(--nw-bg);
+  color:#111827;
+}
+.card{
+  background:var(--nw-surface);
+  border-radius:var(--nw-radius);
+  padding:var(--nw-padding);
+  box-shadow:0 6px 18px rgba(16,24,40,0.06);
+}
+.brand-mark{
+  width:44px;
+  height:44px;
+  border-radius:8px;
+  background:linear-gradient(135deg,var(--nw-primary),var(--nw-accent));
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+}
+.sandbox-banner{
+  background: linear-gradient(90deg, rgba(217,79,161,0.08), rgba(103,44,142,0.06));
+  border:1px solid rgba(103,44,142,0.06);
+  padding:10px;
+  border-radius:6px;
+  color:var(--nw-primary);
+  font-weight:600;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button.primary {
+  background: var(--nw-primary);
+  color: white;
+}
+
+button.primary:hover {
+  background: #552370;
+}
+
+button.accent {
+  background: var(--nw-accent);
+  color: white;
+}
+
+button.accent:hover {
+  background: #c23d85;
+}
+
+button.secondary {
+  background: #E5E7EB;
+  color: #374151;
+}
+
+button.secondary:hover {
+  background: #D1D5DB;
+}
+
+button.danger {
+  background: #EF4444;
+  color: white;
+}
+
+button.danger:hover {
+  background: #DC2626;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--nw-primary);
+  box-shadow: 0 0 0 3px rgba(103, 44, 142, 0.1);
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge.flagged {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.badge.approved {
+  background: #D1FAE5;
+  color: #065F46;
+}
+
+.badge.rejected {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
+.badge.escalated {
+  background: #DBEAFE;
+  color: #1E40AF;
+}
